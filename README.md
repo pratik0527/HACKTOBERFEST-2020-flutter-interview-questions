@@ -187,6 +187,15 @@ You are requested to create your profile using the above link to be a part of it
 
    One type of platform channel is a method channel. Data is serialized on the Dart side and then sent to the native side. You can write native code to interact with the platform before sending a serialized message back. That message might be written in Java or Kotlin on Android or Objective-C or Swift on iOS.
    The second type of platform channel is the event channel, which you use to send a stream of data from the native platform back to Flutter. This is useful for monitoring sensor data.
+   
+30. What are keys in Flutter and when to use it?
+   
+   A Key is an identifier for Widgets, Elements and SemanticsNodes.
+   A new widget will only be used to update an existing element if its key is the same as the key of the current widget associated with the element.
+   Keys must be unique amongst the Elements with the same parent.
+   Subclasses of Key should either subclass LocalKey or GlobalKey.
+   Keys are useful when manipulating collections of widgets of the same type.
+   If you find yourself adding, removing, or reordering a collection of widgets of the same type that hold some state, then, you should use a key.
 
 
 ## Contributors
